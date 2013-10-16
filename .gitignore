@@ -1,0 +1,6 @@
+*.o
+compile/*.o
+*.log
+*.bak
+compile/xeros
+xeros/boot/zBoot

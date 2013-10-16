@@ -1,0 +1,27 @@
+Richard Lum
+20121128
+
+
+
+to rerun section 2.5 tests, 
+	make clean; make; make beros
+to rerun other tests
+	make clean; make test ; make beros
+
+some of the other tests require user input.  
+Some of the tests included in the report maybe 
+commented out of the code from running as a result of
+trying to capture printed output for each of the test cases.
+
+I had some troubles with a number of of by one type errors in 
+working with the process_keys method to handle the keyboard buffer,
+to application buffer and detection of newline, ctld or full application
+buffer to trigger notifies.   I believe I have all the bugs worked out
+and it should work as expected.
+
+
+
+
+Richard
+
+

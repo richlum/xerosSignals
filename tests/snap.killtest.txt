@@ -1,0 +1,60 @@
+
+Booting from Floppy...
+
+Loading........
+
+
+CPSC 415, 2012W1
+A1 Solution Kernel
+32 Bit Xeros 1.1
+Located at: 0 to bce4
+Max addr is 4194303 3fffff
+memory inited
+dispatcher inited
+context inited
+device inited
+create inited
+idleproc pid 2 inited
+### test sysopen with invalid arg
+sysopen( 99 ) returned: -1
+
+### test syswrite with invalid arg
+
+syswrite(KEYBOARD_ECHO, buff, buffsize) returned -1
+
+
+### test sysioctl with invalid arg
+sysioctl(99, 2,3,4) returned: -1
+
+### test syskill arg
+signaltarget is launched, pid = 3
+installed signalhandler1, rc = 0
+
+installed signalhandler3, rc = 0
+
+installed signalhandler5, rc = 0
+
+installed signalhandler7, rc = 0
+
+
+sigkill signal 0
+result = -1
+sigkill signal 1
+result = 0
+sigkill signal 2
+result = -1
+handler1 has been called, 299c
+
+sigkill signal 3
+result = 0
+sigkill signal 4
+result = -1
+sigkill signal 5
+result = 0
+sigkill signal 6
+func address 2a4a, handler5 has been called
+func address 2a10, handler3 has been called
+result = -1
+sigkill signal 7
+result = 0
+func address 2a84, handler7 has been called

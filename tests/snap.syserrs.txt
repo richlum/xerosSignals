@@ -1,0 +1,26 @@
+### sysopen syswrite sysioctl tests ()
+
+### test sysopen with invalid arg
+Entered:sysopen:  AT ../c/syscall.c:167
+device_no=99
+Entered:dispatch:  AT ../c/disp.c:520
+sys_open, device_no = 99
+Entered:di_open:  AT ../c/di_calls.c:86
+sysopen( 99 ) returned: -1
+
+### test syswrite with invalid arg
+Entered:syswrite:  AT ../c/syscall.c:180
+Entered:dispatch:  AT ../c/disp.c:538
+sys write, fd = 1, bufflen = 128
+
+syswrite(KEYBOARD_ECHO, buff, buffsize) returned -1
+
+### test sysioctl with invalid arg
+Entered:sysioctl:  AT ../c/syscall.c:194
+Entered:dispatch:  AT ../c/disp.c:590
+sys ioctl, fd = 99, command = 2
+command args a = 3, b= 4
+Entered:di_ioctl:  AT ../c/di_calls.c:213
+di command = 2
+sysioctl(99, 2,3,4) returned: -1
+

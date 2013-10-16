@@ -1,0 +1,25 @@
+Entered:deliver_signals_ifany:  AT ../c/disp.c:225
+Entered:get_priority_mask:  AT ../c/signal.c:90
+10987654321098765432109876543210
+11111111111111111111111100000000
+Entered:modify_process_stack:  AT ../c/signal.c:141
+saving old esp 2517c
+saving sig_priority = ffffffc0
+saving ret value 0
+sig priorty mask before : ffffffc0
+SIG_PRIORITY BITS
+10987654321098765432109876543210
+11111111111111111111111100000000
+we have pending signal mask : 0x000000a0
+ highest priority signalnumber is 7
+syskill idlechild signal 7 rc =
+root is done, pid =
+Entered:sigtramp:  AT ../c/signal.c:34
+func address 2826, handler1 has been called
+Entered:sigtramp:  AT ../c/signal.c:37
+Entered:sigreturn:  AT ../c/syscall.c:152
+Entered:dispatch:  AT ../c/disp.c:454
+saved old stadkptr = 0x2517c
+saved priority mask = 0xffffffc0
+saved return = 0
+ß

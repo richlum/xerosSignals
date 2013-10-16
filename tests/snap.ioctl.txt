@@ -1,0 +1,73 @@
+sys ioctl, fd = 0, command = 49
+command args a = 17, b= 0
+Entered:di_ioctl:  AT ../c/di_calls.c:213
+di command = 49
+command args a=17 b=0
+Entered:kbd_ioctl:  AT ../c/kbd.c:123
+installing EOF char: 11 w
+ EOF char: 11 w
+9. read chars until eof
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 10 buffaddr = 16cc0
+Entered:dispatch:  AT ../c/disp.c:552
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16cc0, bufflen = 10
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:58
+read process 1, fd = 0, buff addr 16cc0, bufflen 10
+dvread returned 1Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  1
+Entered:dispatch:  AT ../c/disp.c:560
+idleproc is running as pid 2
+
+Entered:idleproc:  AT ../c/user.c:529
+ß
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 10 buffaddr = 16cc0
+Entered:dispatch:  AT ../c/disp.c:552
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16cc0, bufflen = 10
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:58
+read process 1, fd = 0, buff addr 16cc0, bufflen 10
+dvread returned 1Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  1
+Entered:dispatch:  AT ../c/disp.c:560
+idleproc is running as pid 2
+
+Entered:idleproc:  AT ../c/user.c:529
+1234
+kbdbufidx=4
+copy: i=0,applbufidx=0, c=1
+copy: i=1,applbufidx=1, c=2
+copy: i=2,applbufidx=2, c=3
+copy: i=3,applbufidx=3, c=4
+5 CTL state = 1
+ EOF char: 11 
+ c   char: 11 
+removed pid 1 from blocked
+removing idleproc (2) from running, other process available
+process p = 1
+running pid = 2
+syscall sys_read returning 5
+$12345
+
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 10 buffaddr = 16cc0
+Entered:dispatch:  AT ../c/disp.c:552
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16cc0, bufflen = 10
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:58
+Entered:kbd_read:  AT ../c/kbd.c:62
+dvread returned -2Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  -2
+Entered:dispatch:  AT ../c/disp.c:555
+dispatcher read returning 0
+syscall sys_read returning 0
+$
+
+total chars read = 5

@@ -1,0 +1,69 @@
+Entered:di_open:  AT ../c/di_calls.c:86
+Entered:di_open:  AT ../c/di_calls.c:89
+index into fdt is 0
+Entered:di_open:  AT ../c/di_calls.c:122
+Entered:createFDTentry:  AT ../c/di_calls.c:52
+devno=1, devtab=d9c0, devname=KEYBOARD_ECHO, status=1
+Entered:kbd_open:  AT ../c/kbd.c:28
+sysopen(KEYBOARD_ECHO) returned: 0
+
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 6 buffaddr = 16db4
+Entered:dispatch:  AT ../c/disp.c:550
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16db4, bufflen = 6
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:55
+read process 1, fd = 0, buff addr 16db4, bufflen 6
+dvread returned 1Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  1
+Entered:dispatch:  AT ../c/disp.c:558
+idleproc is running as pid 2
+
+Entered:idleproc:  AT ../c/user.c:459
+abcd
+kbdbufidx=4
+copy: i=0,applbufidx=0, c=a
+copy: i=1,applbufidx=1, c=b
+copy: i=2,applbufidx=2, c=c
+copy: i=3,applbufidx=3, c=d
+eEntered:notify:  AT ../c/kbd.c:164
+pid 1 state 4
+removed pid 1 from blocked
+removing idleproc (2) from running, other process available
+process p = 1
+running pid = 2
+syscall sys_read returning 5
+sysread(KEYBOARD_ECHO) returned: 5
+
+abcde
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 6 buffaddr = 16db4
+Entered:dispatch:  AT ../c/disp.c:550
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16db4, bufflen = 6
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:55
+read process 1, fd = 0, buff addr 16db4, bufflen 6
+dvread returned 1Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  1
+Entered:dispatch:  AT ../c/disp.c:558
+fghi
+kbdbufidx=4
+copy: i=0,applbufidx=0, c=f
+copy: i=1,applbufidx=1, c=g
+copy: i=2,applbufidx=2, c=h
+copy: i=3,applbufidx=3, c=i
+kEntered:notify:  AT ../c/kbd.c:164
+pid 1 state 4
+removed pid 1 from blocked
+removing idleproc (2) from running, other process available
+process p = 1
+running pid = 2
+syscall sys_read returning 5
+sysread(KEYBOARD_ECHO) returned: 5
+
+$
+fghik

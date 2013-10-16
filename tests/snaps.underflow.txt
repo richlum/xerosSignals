@@ -1,0 +1,82 @@
+Entered:di_open:  AT ../c/di_calls.c:86
+Entered:di_open:  AT ../c/di_calls.c:89
+index into fdt is 0
+Entered:di_open:  AT ../c/di_calls.c:122
+Entered:createFDTentry:  AT ../c/di_calls.c:52
+devno=1, devtab=d740, devname=KEYBOARD_ECHO, status=1
+Entered:kbd_open:  AT ../c/kbd.c:28
+sysopen(KEYBOARD_ECHO) returned: 0
+
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 3 buffaddr = 16b34
+Entered:dispatch:  AT ../c/disp.c:550
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16b34, bufflen = 3
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:55
+read process 1, fd = 0, buff addr 16b34, bufflen 3
+dvread returned 1Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  1
+Entered:dispatch:  AT ../c/disp.c:558
+idleproc is running as pid 2
+
+Entered:idleproc:  AT ../c/user.c:494
+abEntered:notify:  AT ../c/kbd.c:164
+pid 1 state 4
+removed pid 1 from blocked
+removing idleproc (2) from running, other process available
+process p = 1
+running pid = 2
+syscall sys_read returning 2
+sysread(KEYBOARD_ECHO) returned: 2
+
+$
+ab
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 3 buffaddr = 16b34
+Entered:dispatch:  AT ../c/disp.c:550
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16b34, bufflen = 3
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:55
+read process 1, fd = 0, buff addr 16b34, bufflen 3
+dvread returned 1Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  1
+Entered:dispatch:  AT ../c/disp.c:558
+
+cdEntered:notify:  AT ../c/kbd.c:164
+pid 1 state 4
+removed pid 1 from blocked
+removing idleproc (2) from running, other process available
+process p = 1
+running pid = 2
+syscall sys_read returning 2
+sysread(KEYBOARD_ECHO) returned: 2
+
+$
+cd
+Entered:sysread:  AT ../c/syscall.c:186
+fd = 0sys read, fd = 0, bufflen = 3 buffaddr = 16b34
+Entered:dispatch:  AT ../c/disp.c:550
+Entered:di_read:  AT ../c/di_calls.c:189
+di_read pid = 1, state = 2
+fdindex = 0, buffaddr = 16b34, bufflen = 3
+Entered:di_read:  AT ../c/di_calls.c:195
+Entered:kbd_read:  AT ../c/kbd.c:55
+read process 1, fd = 0, buff addr 16b34, bufflen 3
+dvread returned 1Entered:di_read:  AT ../c/di_calls.c:202
+di_read returning  1
+Entered:dispatch:  AT ../c/disp.c:558
+efEntered:notify:  AT ../c/kbd.c:164
+pid 1 state 4
+removed pid 1 from blocked
+removing idleproc (2) from running, other process available
+process p = 1
+running pid = 2
+syscall sys_read returning 2
+sysread(KEYBOARD_ECHO) returned: 2
+
+$
+ef

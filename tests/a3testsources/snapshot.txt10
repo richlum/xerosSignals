@@ -1,0 +1,25 @@
+20. create new process: sleep5_sig20 11919
+
+21. root will read
+
+child sleep5_sig20 sends syskill(root_pid, 20) rc = 0
+
+func address 2aa2, handler18 has been called
+22. read returned rc = -128
+
+23. root will read until eof
+
+This course sure is interesting.This course sure is interesting.
+A lot of work but ery interesting.A lot of work but ery interesting.
+Wow!Wow!
+71. total chars read
+
+24. root attempt to read again
+
+read returned rc = 0
+
+sysclose(fd) returned: 0
+
+25, GoodBye Cruel World
+
+ß

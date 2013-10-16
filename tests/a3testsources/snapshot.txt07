@@ -1,0 +1,25 @@
+installed signalhandler18, rc = 0
+
+12. create child that sleeps and signals 20 and 18 to root
+
+13. root will read
+
+sleep_sig20_sig18 alive, sleeping 1 pid = 3
+
+child sleep_sig20_sig18 sent syskill(root_pid, 20) (nonexistant handler) rc = -1
+
+
+child sleep_sig20_sig18 sent syskill(root_pid, 18)  rc = 0
+
+func address 2aa2, handler18 has been called
+14. read returned rc = -128
+
+15. create child(sleep5,sig18)
+
+16. replace sighdr18
+
+installed signalhandler18, rc = 0
+
+17. root will read
+
+ß

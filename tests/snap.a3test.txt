@@ -1,0 +1,150 @@
+
+Press F12 for boot menu.
+
+Booting from Floppy...
+
+Loading........
+
+
+CPSC 415, 2012W1
+A1 Solution Kernel
+32 Bit Xeros 1.1
+Located at: 0 to bce4
+Max addr is 4194303 3fffff
+memory inited
+dispatcher inited
+context inited
+device inited
+create inited
+idleproc pid 2 inited
+1. SEASONS GREETING EARTHLING
+sysopen(KEYBOARD_ECHO) returned: 0
+
+3. sysread 10 char one at a time
+
+
+11
+22
+33
+44
+55
+66
+77
+88
+99
+00
+4. Opening noecho keyboard
+sysopen(KEYBOARD_NOECHO) returned: -1
+
+5. Opening echo keyboard
+sysopen(KEYBOARD_ECHO) returned: -1
+
+6. closing keyboard
+sysclose(KEYBOARD_ECHO) returned: 0
+
+7. Opening noecho keyboard
+sysopen(KEYBOARD_NOECHO) returned: 0
+
+8. Three reads of 10 chars
+$Merry Chri
+
+$stmas and
+
+$a Happy Ne
+
+$ Year!
+
+$
+
+total chars read = 36
+9. read chars until eof
+$I'm dreami
+
+$g of a whi
+
+$e Christma
+
+$s.
+
+$Just like
+
+$the ones w
+
+$e used to
+
+$have.
+
+$Let it sno
+
+$w!
+
+$
+
+total chars read = 79
+10. closing keyboard, open echo keyboard
+sysclose(fd) returned: 0
+
+  opening echo keyboard
+sysopen(KEYBOARD_ECHO) returned: 0
+
+11. Installing signalhandler for signal 18 into root
+
+installed signalhandler18, rc = 0
+
+12. create child that sleeps and signals 20 and 18 to root
+
+13. root will read
+
+sleep_sig20_sig18 alive, sleeping 1 pid = 3
+
+child sleep_sig20_sig18 sent syskill(root_pid, 20) (nonexistant handler) rc = -1
+
+
+child sleep_sig20_sig18 sent syskill(root_pid, 18)  rc = 0
+
+func address 2aa2, handler18 has been called
+14. read returned rc = -128
+
+15. create child(sleep5,sig18)
+
+16. replace sighdr18
+
+installed signalhandler18, rc = 0
+
+17. root will read
+
+func address 2aa2, handler18 has been called
+
+child sleep5_sig18 sends syskill(root_pid, 18) rc = 0
+
+func address 29ba, handler2 has been called
+18. read returned rc = -128
+
+19. install oldsig18 handler into sig20 rc = -128
+
+installed signalhandler18, rc = 0
+
+20. create new process: sleep5_sig20 11919
+
+21. root will read
+
+child sleep5_sig20 sends syskill(root_pid, 20) rc = 0
+
+func address 2aa2, handler18 has been called
+22. read returned rc = -128
+
+23. root will read until eof
+
+This course sure is interesting.This course sure is interesting.
+A lot of work but ery interesting.A lot of work but ery interesting.
+Wow!Wow!
+71. total chars read
+
+24. root attempt to read again
+
+read returned rc = 0
+
+sysclose(fd) returned: 0
+
+25, GoodBye Cruel World
+

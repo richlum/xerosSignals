@@ -1,0 +1,25 @@
+
+Press F12 for boot menu.
+
+Booting from Floppy...
+
+Loading........
+
+
+CPSC 415, 2012W1
+A1 Solution Kernel
+32 Bit Xeros 1.1
+Located at: 0 to bce4
+Max addr is 4194303 3fffff
+memory inited
+dispatcher inited
+context inited
+device inited
+create inited
+idleproc pid 2 inited
+1. SEASONS GREETING EARTHLING
+sysopen(KEYBOARD_ECHO) returned: 0
+
+3. sysread 10 char one at a time
+
+ß

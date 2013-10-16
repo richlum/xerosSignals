@@ -1,0 +1,28 @@
+Entered:syssighandler:  AT ../c/syscall.c:118
+Enteredremoving idleproc (2) from readyq
+new running process (1) from readyq
+:syssighandler:  AT ../c/syscall.c:130
+Entered:dispatch:  AT ../c/disp.c:419
+installing sighandler 30
+Entered:dispatch:  AT ../c/disp.c:430
+Entered:dispatch:  AT ../c/disp.c:442
+10987654321098765432109876543210
+01000000000000000000000000000000
+Entered:dispatch:  AT ../c/disp.c:448
+installed signalhandler1, rc = 0
+
+Entered:syssighandler:  AT ../c/syscall.c:118
+Entered:syssighandler:  AT ../c/syscall.c:130
+Entered:dispatch:  AT ../c/disp.c:419
+installing sighandler 30
+Entered:dispatch:  AT ../c/disp.c:430
+Entered:dispatch:  AT ../c/disp.c:442
+10987654321098765432109876543210
+01000000000000000000000000000000
+Entered:dispatch:  AT ../c/disp.c:448
+installed signalhandler2, rc = 0
+
+### call retrieved oldhandler-handler1(8)
+
+handler1 has been called, 3204
+

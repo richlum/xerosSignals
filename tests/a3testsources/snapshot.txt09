@@ -1,0 +1,25 @@
+installed signalhandler18, rc = 0
+
+17. root will read
+
+child sleep5_sig18 sends syskill(root_pid, 18) rc = 0
+
+func address 29ba, handler2 has been called
+18. read returned rc = -128
+
+19. install oldsig18 handler into sig20 rc = -128
+
+installed signalhandler18, rc = 0
+
+20. create new process: sleep5_sig20 11919
+
+21. root will read
+
+child sleep5_sig20 sends syskill(root_pid, 20) rc = 0
+
+func address 2aa2, handler18 has been called
+22. read returned rc = -128
+
+23. root will read until eof
+
+ß

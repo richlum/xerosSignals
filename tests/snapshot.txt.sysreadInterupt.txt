@@ -1,0 +1,24 @@
+memory inited
+dispatcher inited
+context inited
+device inited
+create inited
+idleproc pid 2 inited
+15. create child(sleep5,sig18)
+
+install sig handler18 into sig 18 rc = 0
+
+installed signalhandler18 into signal 18, rc = 0
+
+  opening echo keyboard
+sysopen(KEYBOARD_ECHO) returned: 0
+
+root will read
+
+child sleep5_sig18 sends syskill(root_pid, 18) rc = 0
+
+func address 2ab2, handler18 has been called
+sysread(fd) returned: -128
+
+sysclose(fd) returned: 0
+

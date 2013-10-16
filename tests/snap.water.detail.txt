@@ -1,0 +1,48 @@
+Entered:dispatch:  AT ../c/disp.c:448
+### starting sigwaittest
+pid entry = 3 for index value 3
+waiter pid = 3
+
+installing sighandler 7
+
+Entered:syssighandler:  AT ../c/syscall.c:118
+Entered:syssighandler:  AT ../c/syscall.c:130
+Entered:dispatch:  AT ../c/disp.c:419
+installing sighandler 7
+Entered:dispatch:  AT ../c/disp.c:430
+Entered:dispatch:  AT ../c/disp.c:442
+10987654321098765432109876543210
+00000000000000000000000010000000
+Entered:dispatch:  AT ../c/disp.c:448
+pid 1 going to sleep for 9000 ms
+waiter installed sighandler 7
+waiter calling syssigwait
+Entered:syssigwait:  AT ../c/syscall.c:158
+Entered:dispatch:  AT ../c/disp.c:501
+idleproc is running as pid 2
+
+Entered:idleproc:  AT ../c/user.c:529
+10987654321098765432109876543210
+11111111111111111111111100000000
+Entered:modify_process_stack:  AT ../c/signal.c:153
+saving old esp 2acdc
+saving sig_priority = ffffffff
+saving ret value 7
+sig priorty mask before : ffffffff
+SIG_PRIORITY BITS
+10987654321098765432109876543210
+11111111111111111111111100000000
+we have pending signal mask : 0x00000080
+ highest priority signalnumber is 7
+sigkill waiter with signal 7 returned 0
+
+Entered:sigtramp:  AT ../c/signal.c:34
+func address 3224, handler7 has been called
+Entered:sigtramp:  AT ../c/signal.c:37
+Entered:sigreturn:  AT ../c/syscall.c:151
+Entered:dispatch:  AT ../c/disp.c:452
+saved old stadkptr = 0x2acdc
+saved priority mask = 0xffffffff
+saved return = 7
+p->ret before restoring = 7
+waiter returned from syssigwait by signal 7

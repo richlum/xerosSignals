@@ -1,0 +1,25 @@
+sysopen(KEYBOARD_NOECHO) returned: -1
+
+5. Opening echo keyboard
+sysopen(KEYBOARD_ECHO) returned: -1
+
+6. closing keyboard
+sysclose(KEYBOARD_ECHO) returned: 0
+
+7. Opening noecho keyboard
+sysopen(KEYBOARD_NOECHO) returned: 0
+
+8. Three reads of 10 chars
+$Merry Chri
+
+$stmas and
+
+$a Happy Ne
+
+$ Year!
+
+$
+
+total chars read = 36
+9. read chars until eof
+ß

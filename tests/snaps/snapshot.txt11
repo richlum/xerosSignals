@@ -1,0 +1,25 @@
+Entered:dispatch:  AT ../c/disp.c:432
+Entered:dispatch:  AT ../c/disp.c:444
+10987654321098765432109876543210
+00000000000000000000000010101000
+Entered:dispatch:  AT ../c/disp.c:450
+idle child installed signalhandler1, rc = 0
+
+idle child  pid = 3
+root issuing syskill idlechild signal 1
+Entered:sigkill:  AT ../c/syscall.c:141
+Entered:dispatch:  AT ../c/disp.c:477
+target pid 3, signal 1
+Entered:validsignal:  AT ../c/signal.c:17
+Entered:validsignal:  AT ../c/signal.c:19
+Entered:signal:  AT ../c/signal.c:106
+signal returned -1
+syskill idlechild signal 1 rc =
+Entered:sigkill:  AT ../c/syscall.c:141
+Entered:dispatch:  AT ../c/disp.c:477
+target pid 3, signal 5
+Entered:validsignal:  AT ../c/signal.c:17
+Entered:signal:  AT ../c/signal.c:111
+signal returned 0
+Entered:deliver_signals_ifany:  AT ../c/disp.c:225
+

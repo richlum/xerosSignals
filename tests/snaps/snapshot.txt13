@@ -1,0 +1,25 @@
+saving old esp 251c0
+saving sig_priority = ffffffff
+saving ret value 0
+sig priorty mask before : ffffffff
+SIG_PRIORITY BITS
+10987654321098765432109876543210
+11111111111111111111111111000000
+we have pending signal mask : 0x00000020
+ highest priority signalnumber is 5
+syskill idlechild signal 5 rc =
+Entered:sigkill:  AT ../c/syscall.c:141
+Entered:dispatch:  AT ../c/disp.c:477
+target pid 3, signal 7
+Entered:validsignal:  AT ../c/signal.c:17
+Entered:signal:  AT ../c/signal.c:111
+signal returned 0
+Entered:deliver_signals_ifany:  AT ../c/disp.c:225
+Entered:get_priority_mask:  AT ../c/signal.c:90
+10987654321098765432109876543210
+11111111111111111111111100000000
+Entered:modify_process_stack:  AT ../c/signal.c:141
+saving old esp 2517c
+saving sig_priority = ffffffc0
+saving ret value 0
+ß

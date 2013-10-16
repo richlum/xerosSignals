@@ -1,0 +1,25 @@
+
+$Let it sno
+
+$w!
+
+$
+
+total chars read = 79
+10. closing keyboard, open echo keyboard
+sysclose(fd) returned: 0
+
+  opening echo keyboard
+sysopen(KEYBOARD_ECHO) returned: 0
+
+11. Installing signalhandler for signal 18 into root
+
+installed signalhandler18, rc = 0
+
+12. create child that sleeps and signals 20 and 18 to root
+
+13. root will read
+
+sleep_sig20_sig18 alive, sleeping 1 pid = 3
+
+ß

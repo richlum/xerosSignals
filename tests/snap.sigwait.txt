@@ -1,0 +1,24 @@
+device inited
+create inited
+idleproc pid 2 inited
+installed signalhandler1, rc = 0
+
+installed signalhandler2, rc = 0
+
+### call retrieved oldhandler-handler1(8)
+
+handler1 has been called, 28f0
+
+### starting sigwaittest
+waiter pid = 3
+
+installing sighandler 7
+
+waiter installed sighandler 7
+waiter calling syssigwait
+idleproc is running as pid 2
+
+sigkill waiter with signal 7 returned 0
+
+func address 29d8, handler7 has been called
+waiter returned from syssigwait by signal 7
